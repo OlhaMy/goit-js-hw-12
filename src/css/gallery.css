@@ -1,0 +1,28 @@
+.title {
+    display: flex;
+    align-items: center;
+justify-content: center;
+}
+.form {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+margin-top: 20px;
+}
+
+
+.btn-search {
+    background-color: blueviolet;
+    color: aliceblue;
+    border-style: none;
+    border-radius: 8px;
+    width: 55px;
+    height: 20px;
+
+}
+.btn-search:hover,
+.btn-search:focus {
+    background-color: rgb(174, 122, 139);
+    color: black;
+}
