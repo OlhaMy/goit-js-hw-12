@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <h1 class="title">Image Search App</h1>
-    <form class="form">
-      <input type="text" name="text" placeholder="search images..." />
-      <button class="btn-search" type="submit">Search</button>
-    </form>
+    <section>
+      <h1 class="title">Image Search App</h1>
+      <form class="form">
+        <input type="text" name="text" placeholder="search images..." />
+        <button class="btn-search" type="submit">Search</button>
+      </form>
 
-    <ul class="gallery"></ul>
+      <span class="loader">Loading images, please wait</span>
+
+      <ul class="gallery"></ul>
+    </section>
 
     <script type="module" src="./js/pixabay-api.js"></script>
     <script type="module" src="./js/render-functions.js"></script>

@@ -46,7 +46,6 @@ refs.form.addEventListener('submit', e => {
         message:
           'Sorry, there are no images matching your search query. Please try again!',
       });
-      console.error('Fetch error: ', error);
     });
 
   e.currentTarget.reset();

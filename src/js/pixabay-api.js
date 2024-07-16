@@ -3,7 +3,7 @@ export function getPhotos(q) {
   const params = new URLSearchParams({
     key: '44946850-4c776fe0ffa968f959f660738',
     q,
-    type: 'photo',
+    image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
   });
