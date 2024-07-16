@@ -9,6 +9,7 @@ align-items: center;
 justify-content: center;
 gap: 10px;
 margin-top: 20px;
+margin-bottom: 20px;
 }
 
 
@@ -26,3 +27,47 @@ margin-top: 20px;
     background-color: rgb(174, 122, 139);
     color: black;
 }
+
+
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .image-gallery li {
+    list-style: none;
+  }
+  
+  .image-gallery img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .image-gallery .info {
+    margin-top: 8px;
+  }
+  
+  .image-gallery .info ul {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .image-gallery .info li {
+    list-style: none;
+  }
+  
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  

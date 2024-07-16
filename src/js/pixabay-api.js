@@ -8,10 +8,17 @@ export function getPhotos(q) {
     safesearch: true,
   });
 
-  return fetch(`${BASE_URL}?${params}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  });
+  return fetch(`${BASE_URL}?${params}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.status);
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.hits.length === 0) {
+        throw new Error('No images found');
+      }
+      return data;
+    });
 }

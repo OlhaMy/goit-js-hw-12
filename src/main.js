@@ -10,17 +10,35 @@ import { getPhotos } from './js/pixabay-api';
 const refs = {
   form: document.querySelector('.form'),
   btnSearch: document.querySelector('.btn-search'),
-  imgList: document.querySelector('.image-gallery'),
+  imgList: document.querySelector('.gallery'),
 };
+
+let lightbox;
 
 refs.form.addEventListener('submit', e => {
   e.preventDefault();
 
   const input = e.target.elements.text.value.trim();
 
+  if (!input) {
+    iziToast.error({
+      title: 'Error',
+      message: 'Please enter a search query!',
+    });
+    return;
+  }
+
   getPhotos(input)
     .then(res => {
       refs.imgList.innerHTML = createMarkup(res.hits);
+      if (lightbox) {
+        lightbox.refresh();
+      } else {
+        lightbox = new SimpleLightbox('.gallery-link', {
+          captionsData: 'alt',
+          captionDelay: 250,
+        });
+      }
     })
     .catch(error => {
       iziToast.error({
@@ -28,5 +46,8 @@ refs.form.addEventListener('submit', e => {
         message:
           'Sorry, there are no images matching your search query. Please try again!',
       });
+      console.error('Fetch error: ', error);
     });
+
+  e.currentTarget.reset();
 });
