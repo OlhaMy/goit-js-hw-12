@@ -127,7 +127,13 @@ section {
     letter-spacing: 0.64px;
     box-sizing: border-box;
     margin-bottom: 8px;
+    transition: opacity 0.75s, visibility 0.75s;
    
+  }
+
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
   }
   .loader::after {
   
