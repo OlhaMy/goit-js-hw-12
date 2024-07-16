@@ -25,6 +25,7 @@ refs.form.addEventListener('submit', e => {
     iziToast.error({
       title: 'Error',
       message: 'Please enter a search query!',
+      position: 'topRight',
     });
     return;
   }
@@ -40,6 +41,7 @@ refs.form.addEventListener('submit', e => {
           title: 'Error',
           message:
             'Sorry, there are no images matching your search query. Please try again!',
+          position: 'topRight',
         });
         return;
       }
@@ -58,6 +60,7 @@ refs.form.addEventListener('submit', e => {
         title: 'Error',
         message:
           'Sorry, there are no images matching your search query. Please try again!',
+        position: 'topRight',
       });
       console.error('Fetch error: ', error);
     })
