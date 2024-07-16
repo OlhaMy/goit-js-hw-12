@@ -5,7 +5,6 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { createMarkup } from './js/render-functions';
-
 import { getPhotos } from './js/pixabay-api';
 
 const refs = {
