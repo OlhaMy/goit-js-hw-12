@@ -47,12 +47,27 @@ section {
     color: black;
 }
 
+.btn-load {
+  background-color: blueviolet;
+    color: aliceblue;
+    border-style: none;
+    border-radius: 8px;
+    width: 80px;
+    height: 25px;
+    margin-bottom: 16px;
+}
+.btn-load:hover,
+.btn-load:focus {
+    background-color: rgb(174, 122, 139);
+    color: black;
+}
 
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    margin-bottom: 20px;
   }
   .gallery-list{
     border: 1px solid #808080;
