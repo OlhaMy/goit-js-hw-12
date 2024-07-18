@@ -10,15 +10,16 @@
   <body>
     <section>
       <h1 class="title">Image Search App</h1>
+
       <form class="form">
         <input type="text" name="text" placeholder="search images..." />
         <button class="btn-search" type="submit">Search</button>
       </form>
 
-      <span class="loader loader--hidden">Loading images, please wait</span>
-
       <ul class="gallery"></ul>
+
       <button type="button" class="btn-load hidden">Load more</button>
+      <span class="loader hidden">Loading images, please wait</span>
     </section>
 
     <script type="module" src="./js/pixabay-api.js"></script>
